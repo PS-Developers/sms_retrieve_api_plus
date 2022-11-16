@@ -27,10 +27,9 @@ class _MyAppState extends State<MyApp> {
   Future<void> getSignature() async {
     String signature = "";
     try {
-      signature =
-          await SmsRetrieverApiPlus.getSignature() ?? 'Unknown platform version';
+      signature = await SmsRetrieverApiPlus.getSignature() ?? 'Unknown platform version';
     } catch (e) {
-      print(e.toString());
+      debugPrint(e.toString());
     }
     if (!mounted) return;
     setState(() {
@@ -53,8 +52,7 @@ class _MyAppState extends State<MyApp> {
             ),
             ElevatedButton(
                 onPressed: () async {
-                  String status = await SmsRetrieverApiPlus.initSMSAPI() ??
-                      'Unknown platform version';
+                  String status = await SmsRetrieverApiPlus.initSMSAPI() ?? 'Unknown platform version';
                   setState(() {
                     _initSMSAPI = status;
                   });

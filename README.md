@@ -2,6 +2,13 @@
 
 A new Flutter plugin to retrieve the SMS on Android using SMS Retrieval API
 
+## How to works 
+
+With the SMS Retriever API, you can perform SMS-based user verification in your Android app automatically, without requiring the user to manually type verification codes, and without requiring any extra app permissions. When you implement automatic SMS verification in your app, the verification flow looks like this:
+
+![](https://github.com/PanneerDev/sms_retrieve_api_plus/blob/master/img/sms_verification.png)
+
+
 ## Getting Started
 
 To retrieve a app signature. It requires by the SMS
@@ -25,8 +32,6 @@ Example SMS
 [#] Your example code is:
 123456
 appSignature
-
-## Usage 
 
 ## Reference
 

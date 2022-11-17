@@ -26,6 +26,8 @@ Example SMS
 123456
 appSignature
 
+## Usage 
+
 ## Reference
 
 https://developers.google.com/identity/sms-retriever/overview

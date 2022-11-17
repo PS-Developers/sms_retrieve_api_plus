@@ -24,6 +24,23 @@ class _MyAppState extends State<MyApp> {
     getSignature();
   }
 
+// When your server receives a request to verify a phone number, first construct the verification message that you will send to the user's device. This message must:
+
+// 1. Be no longer than 140 bytes
+// 2. Contain a one-time code that the client sends back to your server to complete the verification flow (see Generating a one-time code)
+// 3. Include an 11-character hash string that identifies your app (see Computing your app's hash string)
+
+// Otherwise, the contents of the verification message can be whatever you choose. It is helpful to create a message from which you can easily extract the one-time code later on. For example, a valid verification message might look like the following:
+
+//Your ExampleApp code is: 123ABC78
+//FA+9qCX9VSu
+
+//Alternatively
+
+//keytool -exportcert -alias PlayDeploymentCert -keystore MyProductionKeys.keystore | xxd -p | tr -d "[:space:]" | echo -n com.example.myapp `cat` | sha256sum | tr -d "[:space:]-" | xxd -r -p | base64 | cut -c1-11
+
+//Below generate key change in debug, release and publish play store generate key changed
+
   Future<void> getSignature() async {
     String signature = "";
     try {
@@ -52,10 +69,7 @@ class _MyAppState extends State<MyApp> {
             ),
             ElevatedButton(
                 onPressed: () async {
-                  String status = await SmsRetrieverApiPlus.initSMSAPI() ?? 'Unknown platform version';
-                  setState(() {
-                    _initSMSAPI = status;
-                  });
+                  await getMessage();
                 },
                 child: const Text("InitSMSApi")),
             Center(
@@ -65,5 +79,13 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
     );
+  }
+
+  //Get the Message using initSMSAPI Only one's triger using get meaage
+  Future<void> getMessage() async {
+    String status = await SmsRetrieverApiPlus.initSMSAPI() ?? 'Unknown platform version';
+    setState(() {
+      _initSMSAPI = status;
+    });
   }
 }

@@ -8,10 +8,14 @@ With the SMS Retriever API, you can perform SMS-based user verification in your 
 
 ![](https://github.com/PanneerDev/sms_retrieve_api_plus/blob/master/img/sms_verification.png)
 
+## Reference
+
+https://developers.google.com/identity/sms-retriever/overview
 
 ## Getting Started
 
-To retrieve a app signature. It requires by the SMS
+To retrieve a app signature. It requires by the SMS . 
+Below generate key change in debug, release and publish play store generate key changed
 ```dart
 String appSignature = await SmsRetrieverApiPlus.getSignature();
 ```
@@ -33,6 +37,10 @@ Example SMS
 123456
 appSignature
 
+## Output
+
+
 ## Reference
 
-https://developers.google.com/identity/sms-retriever/overview
+![](https://github.com/PanneerDev/sms_retrieve_api_plus/blob/master/img/1.png)
+![](https://github.com/PanneerDev/sms_retrieve_api_plus/blob/master/img/2.png)

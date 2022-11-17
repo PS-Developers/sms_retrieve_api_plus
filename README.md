@@ -39,15 +39,9 @@ appSignature
 
 ## Output
 
-
-## Reference
-
 <table>
   <tr>
     <td><img src="https://github.com/PanneerDev/sms_retrieve_api_plus/blob/master/img/1.png" width="200"></td>
     <td><img src="https://github.com/PanneerDev/sms_retrieve_api_plus/blob/master/img/2.png"  width="200"></td>
   </tr>
 </table>
-<!-- 
-![](https://github.com/PanneerDev/sms_retrieve_api_plus/blob/master/img/1.png)
-![](https://github.com/PanneerDev/sms_retrieve_api_plus/blob/master/img/2.png) -->

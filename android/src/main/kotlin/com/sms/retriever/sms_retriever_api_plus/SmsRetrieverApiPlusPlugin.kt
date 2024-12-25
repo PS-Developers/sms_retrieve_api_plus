@@ -110,7 +110,7 @@ class SmsRetrieverApiPlusPlugin: FlutterPlugin, MethodCallHandler,ActivityAware 
   }
 
   override fun onDetachedFromActivityForConfigChanges() {
-    TODO("Not yet implemented")
+    activity = null
   }
 
   override fun onReattachedToActivityForConfigChanges(binding: ActivityPluginBinding) {
@@ -118,6 +118,6 @@ class SmsRetrieverApiPlusPlugin: FlutterPlugin, MethodCallHandler,ActivityAware 
   }
 
   override fun onDetachedFromActivity() {
-    TODO("Not yet implemented")
+    activity = null
   }
 }
